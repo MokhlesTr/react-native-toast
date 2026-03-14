@@ -13,6 +13,13 @@ Reusable toast UI primitives for React Native.
 - New custom toast type.
 - Default right color is #545D595E.
 
+# @tarmiz/react-native-toast
+
+[![npm version](https://img.shields.io/npm/v/@tarmiz/react-native-toast.svg)](https://www.npmjs.com/package/@tarmiz/react-native-toast)
+[![npm downloads](https://img.shields.io/npm/dm/@tarmiz/react-native-toast.svg)](https://www.npmjs.com/package/@tarmiz/react-native-toast)
+[![License](https://img.shields.io/npm/l/@tarmiz/react-native-toast.svg)](LICENSE)
+[![Socket Security](https://socket.dev/api/badge/npm/package/@tarmiz/react-native-toast)](https://socket.dev/npm/package/@tarmiz/react-native-toast)
+
 ## Install
     
     Yarn
