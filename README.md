@@ -14,10 +14,16 @@ Reusable toast UI primitives for React Native.
 - Default right color is #545D595E.
 
 ## Install
+    
+    Yarn
+      yarn add @tarmiz/react-native-toast
+      yarn add react-native-reanimated react-native-safe-area-context react-native-responsive-screen lucide-react-native expo-blur expo-linear-gradient
+    
+    Npm
+     npm install @tarmiz/react-native-toast
+     npm install react-native-reanimated react-native-safe-area-context react-native-responsive-screen lucide-react-native expo-blur expo-linear-gradient
 
-    yarn add @tarmiz/react-native-toast
-    yarn add react-native-reanimated react-native-safe-area-context react-native-responsive-screen lucide-react-native expo-blur expo-linear-gradient
-
+    
 ## Basic Usage
 
     import React from "react";
@@ -101,12 +107,4 @@ Default behavior:
 
 - Left color follows toast type color.
 - Right color defaults to #545D595E.
-
-## Add Video Demo
-
-If you want a video in README, add this block and replace the URL with your own mp4:
-
-<video src="https://your-domain.com/react-native-toast-demo.mp4" controls muted playsinline width="360"></video>
-
-If your package registry preview does not render video tags, add a fallback link below it:
 
