@@ -63,12 +63,16 @@ type CustomToastProps = {
   message: string;
   status?: ToastStatus;
   noMargin?: boolean;
+  leftColor?: string;
+  rightColor?: string;
 };
 
 export const CustomToast = ({
   message,
   status = "success",
   noMargin = false,
+  leftColor,
+  rightColor,
 }: CustomToastProps) => {
   const getIconConfig = () => {
     const size = hp("2.5%");
@@ -102,6 +106,8 @@ export const CustomToast = ({
   };
 
   const { icon, color } = getIconConfig();
+  const gradientLeft = leftColor ?? `${color}80`;
+  const gradientRight = rightColor ?? palette.shadowWhite;
   const insets = useSafeAreaInsets();
   const topPadding = noMargin ? 0 : insets.top > 0 ? insets.top : hp("2%");
 
@@ -119,7 +125,7 @@ export const CustomToast = ({
       ]}
     >
       <LinearGradient
-        colors={[`${color}80`, palette.shadowWhite]}
+        colors={[gradientLeft, gradientRight]}
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
         style={StyleSheet.absoluteFillObject}
@@ -198,17 +204,23 @@ type ObjectShowArg = {
   type?: BlurToastType | keyof typeof ALERT_TYPE;
   textBody: string;
   duration?: number;
+  leftColor?: string;
+  rightColor?: string;
 };
 
 interface ShowOptions {
   type?: BlurToastType;
   duration?: number;
+  leftColor?: string;
+  rightColor?: string;
 }
 
 export const useBlurToast = () => {
   const [visible, setVisible] = React.useState(false);
   const [message, setMessage] = React.useState("");
   const [type, setType] = React.useState<BlurToastType>("success");
+  const [leftColor, setLeftColor] = React.useState<string | undefined>();
+  const [rightColor, setRightColor] = React.useState<string | undefined>();
   const opacity = useSharedValue(0);
   const translateY = useSharedValue(-20);
   const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -253,9 +265,13 @@ export const useBlurToast = () => {
       if (typeof arg === "string") {
         setMessage(arg);
         setType(resolveType(opts?.type));
+        setLeftColor(opts?.leftColor);
+        setRightColor(opts?.rightColor);
       } else {
         setMessage(arg.textBody);
         setType(resolveType(arg.type));
+        setLeftColor(arg.leftColor);
+        setRightColor(arg.rightColor);
       }
 
       setVisible(true);
@@ -303,7 +319,13 @@ export const useBlurToast = () => {
         pointerEvents="box-none"
         style={[styles.floatingWrapper, aStyle, { top: insets.top }]}
       >
-        <CustomToast message={message} status={type} noMargin />
+        <CustomToast
+          message={message}
+          status={type}
+          noMargin
+          leftColor={leftColor}
+          rightColor={rightColor}
+        />
       </Animated.View>
     );
   };

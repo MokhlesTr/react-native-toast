@@ -28,6 +28,8 @@ export const Example = () => {
               textBody: "Saved successfully",
               type: ALERT_TYPE.SUCCESS,
               duration: 3000,
+              leftColor: "#000000",
+              rightColor: "transparent",
             })
           }
         >
@@ -40,3 +42,5 @@ export const Example = () => {
   );
 };
 ```
+
+You can pass any valid color for `leftColor` and `rightColor` (for example `"black"`, `"white"`, `"transparent"`, hex, or rgba). If omitted, the toast uses default colors based on the alert type.
