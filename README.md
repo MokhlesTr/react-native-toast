@@ -11,7 +11,7 @@ Reusable toast UI primitives for React Native.
   <img src="https://raw.githubusercontent.com/MokhlesTr/react-native-toast/main/visual_showcase.gif" width="360"/>
 </p>
 
-## Version 1.3.0
+## Version 1.4.0
 
 - Refactored into components, hooks, and utils.
 - Built-in queue stack with max 3 toasts.
