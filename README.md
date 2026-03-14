@@ -2,6 +2,10 @@
 
 Reusable toast UI primitives for React Native.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MokhlesTr/react-native-toast/main/visual_showcase.gif" width="360"/>
+</p>
+
 ## Version 1.3.0
 
 - Refactored into components, hooks, and utils.
@@ -106,4 +110,3 @@ If you want a video in README, add this block and replace the URL with your own 
 
 If your package registry preview does not render video tags, add a fallback link below it:
 
-[Watch demo video](https://your-domain.com/react-native-toast-demo.mp4)
