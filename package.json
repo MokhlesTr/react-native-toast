@@ -1,16 +1,18 @@
 {
   "name": "@tarmiz/react-native-toast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable custom toast components and hook for React Native",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "yarn build"
   },
   "keywords": [
     "react-native",
@@ -19,6 +21,17 @@
     "reanimated"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MokhlesTr/react-native-toast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MokhlesTr/react-native-toast/issues"
+  },
+  "homepage": "https://github.com/MokhlesTr/react-native-toast#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "expo-blur": "*",
     "expo-linear-gradient": "*",

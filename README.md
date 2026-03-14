@@ -5,6 +5,7 @@ Reusable toast UI primitives.
 ## Install
 
 ```bash
+yarn add @tarmiz/react-native-toast
 yarn add react-native-reanimated react-native-safe-area-context react-native-responsive-screen lucide-react-native expo-blur expo-linear-gradient
 ```
 
@@ -13,7 +14,7 @@ yarn add react-native-reanimated react-native-safe-area-context react-native-res
 ```tsx
 import React from "react";
 import { Pressable, Text, View } from "react-native";
-import { ALERT_TYPE, useBlurToast } from "react-native-toast";
+import { ALERT_TYPE, useBlurToast } from "@tarmiz/react-native-toast";
 
 export const Example = () => {
   const { Toast, show } = useBlurToast();
