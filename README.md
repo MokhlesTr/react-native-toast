@@ -4,6 +4,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/@tarmiz/react-native-toast.svg)](https://www.npmjs.com/package/@tarmiz/react-native-toast)
 [![License](https://img.shields.io/npm/l/@tarmiz/react-native-toast.svg)](LICENSE)
 [![Socket Security](https://socket.dev/api/badge/npm/package/@tarmiz/react-native-toast)](https://socket.dev/npm/package/@tarmiz/react-native-toast)
+![npm downloads](https://img.shields.io/npm/dw/@tarmiz/react-native-toast)
 
 Reusable toast UI primitives for React Native.
 
